@@ -1,4 +1,4 @@
-//Check if Resturant or Not 
+//Check if Donor or Not 
 if (sessionStorage.getItem("role") != "Donor") {
 
     alert("You Are Not Donor So You can Not Post Yet");
