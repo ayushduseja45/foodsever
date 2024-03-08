@@ -22,7 +22,7 @@ firebase.database().ref("Donor").once("value", function (snapshots) {
                   content += '<div>';
                   content += '<table>';
                   content += '<tr>';
-                  content += '<td class="fw-bold">Quantity</td> </tr> <tr> <td>' + val.Quantity + ' Dishes</td> </tr>';
+                  content += '<td class="fw-bold">Quantity</td> </tr> <tr> <td>' + val.Quantity + ' kilograms</td> </tr>';
                   content += '</table>';
                   content += '</div>';
                   content += '<div>';
