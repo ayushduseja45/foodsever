@@ -48,7 +48,7 @@ firebase.database().ref("Donor").once("value", function (snapshots) {
                   content += '<tr> <td class="fw-bold">Remark</td> </tr> <tr> <td>' + val.mark + '</td> </tr>';
                   content += '</table>';
                   content += '</div></div>';
-                  content += '<div class="itm col-lg-2 d-flex flex-column justify-content-around"> <div> <table> <tr> <td class="fw-bold">Restaurant Number</td> </tr> <tr> <td>' + childSnaShot.val().mobilenumber + '</td> </tr><tr><td class="fw-bold">Accepted NGO No '+val.DeliveryContactN+'</td><br></tr> </table> </div> </div> <div class="itm col-lg-3 d-flex flex-column justify-content-around status-itm"> <div> <table class="w-100"> <tr> '+donationStatus+' </tr> </table> </div></div>';
+                  content += '<div class="itm col-lg-2 d-flex flex-column justify-content-around"> <div> <table> <tr> <td class="fw-bold">Donor Number</td> </tr> <tr> <td>' + childSnaShot.val().mobilenumber + '</td> </tr><tr><td class="fw-bold">Accepted NGO No '+val.DeliveryContactN+'</td><br></tr> </table> </div> </div> <div class="itm col-lg-3 d-flex flex-column justify-content-around status-itm"> <div> <table class="w-100"> <tr> '+donationStatus+' </tr> </table> </div></div>';
                   content += '<hr class="mt-4">';
                   content += '</div>';
             });
