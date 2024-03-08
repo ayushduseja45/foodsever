@@ -1,6 +1,6 @@
-firebase.database().ref("Restaurant").once("value", function (snapshots) {
+firebase.database().ref("Donor").once("value", function (snapshots) {
     snapshots.forEach(function(childSnaShot){
-        firebase.database().ref("Restaurant/"+childSnaShot.key+"/Donation").once('value', function (snapshot) {
+        firebase.database().ref("Donor/"+childSnaShot.key+"/Donation").once('value', function (snapshot) {
             var content = '';
             snapshot.forEach(function (data) {
                 var val = data.val();

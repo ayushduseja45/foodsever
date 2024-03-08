@@ -10,9 +10,9 @@ Save.onclick = function(){
     }else if(!Dnumber.match(numberFomrate)){
         alert("Please Enter Valid Mobile Number!");
     }else{
-        firebase.database().ref("Restaurant/").orderByChild("mobilenumber").equalTo(n).once("value", function (snapshots) {
+        firebase.database().ref("Donor/").orderByChild("mobilenumber").equalTo(n).once("value", function (snapshots) {
             snapshots.forEach(function(childSnaShot){
-                firebase.database().ref("Restaurant/"+childSnaShot.key+"/Donation/"+id).update({
+                firebase.database().ref("Donor/"+childSnaShot.key+"/Donation/"+id).update({
                     NGOStatus:"Accept",
                     DeliveryPname:name,
                     DeliveryContactN:Dnumber

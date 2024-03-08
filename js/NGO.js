@@ -1,9 +1,9 @@
 document.getElementById("ngoname").innerHTML = sessionStorage.getItem("username") + " NGO";
 let counterno = 0;
 let dish = 0;
-firebase.database().ref("Restaurant").once("value", function (snapshots) {
+firebase.database().ref("Donor").once("value", function (snapshots) {
    snapshots.forEach(function (chilsSnapshot) {
-    firebase.database().ref("Restaurant/" + chilsSnapshot.key + "/Donation").once('value', function (snap) {
+    firebase.database().ref("Donor/" + chilsSnapshot.key + "/Donation").once('value', function (snap) {
       counterno = (snap.numChildren());
       var content = '';    
       var hygieneLevelEdit = "";

@@ -1,7 +1,7 @@
 //Check if Resturant or Not 
-if (sessionStorage.getItem("role") != "Restaurant") {
+if (sessionStorage.getItem("role") != "Donor") {
 
-    alert("You Are Not Resturant So You Not Post Yet");
+    alert("You Are Not Donor So You can Not Post Yet");
     window.location.href  = "index.html";
     
 } else {
@@ -36,9 +36,9 @@ if (sessionStorage.getItem("role") != "Restaurant") {
                 } else {
                     output = document.getElementById("mark").value;
                 }
-                firebase.database().ref("Restaurant").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value', snap => {
+                firebase.database().ref("Donor").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value', snap => {
                     snap.forEach(function (childSnapshot) {
-                        firebase.database().ref("Restaurant/"+childSnapshot.key+"/Donation").push({
+                        firebase.database().ref("Donor/"+childSnapshot.key+"/Donation").push({
                             NGOStatus:"Pending",
                             Quantity: quantity,
                             tyfood:typeOfFood,

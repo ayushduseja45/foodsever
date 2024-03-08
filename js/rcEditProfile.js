@@ -1,5 +1,5 @@
 let marks = "";
-firebase.database().ref("Restaurant").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',function(snapshot){
+firebase.database().ref("Donor").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',function(snapshot){
     snapshot.forEach(function(childSnapshot){
         document.getElementById("name").value = childSnapshot.val().username;
         document.getElementById("region").value = childSnapshot.val().region;
@@ -25,9 +25,9 @@ saveBtn.onclick = function(){
     }else{
         markss = document.getElementById("mark").value;
     }
-    firebase.database().ref("Restaurant").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',function(snapShot){
+    firebase.database().ref("Donor").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',function(snapShot){
         snapShot.forEach(function(childSnapshot){
-            firebase.database().ref("Restaurant/"+childSnapshot.key).update({
+            firebase.database().ref("Donor/"+childSnapshot.key).update({
                 username:document.getElementById("name").value,
                 region:document.getElementById("region").value,
                 mobilenumber:document.getElementById("number").value,

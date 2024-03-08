@@ -1,9 +1,9 @@
 document.getElementById("rcname").innerHTML = sessionStorage.getItem("username") + " Restaurant";
 let nof = 0,nodd = 0, nofd = 0;
 
-firebase.database().ref("Restaurant").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',snapshot=>{
+firebase.database().ref("Donor").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',snapshot=>{
     snapshot.forEach(function(chilsSnapshot){
-       firebase.database().ref("Restaurant/"+chilsSnapshot.key+"/Donation").once('value',function(childQuerySnapshot){
+       firebase.database().ref("Donor/"+chilsSnapshot.key+"/Donation").once('value',function(childQuerySnapshot){
         var content = '';    
         var hygieneLevelEdit = "";
         var ngStatus = "";
