@@ -1,4 +1,4 @@
-document.getElementById("rcname").innerHTML = sessionStorage.getItem("username") + " Restaurant";
+document.getElementById("rcname").innerHTML = sessionStorage.getItem("username") + " Donor";
 let nof = 0,nodd = 0, nofd = 0;
 
 firebase.database().ref("Donor").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',snapshot=>{
