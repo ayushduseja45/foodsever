@@ -46,22 +46,25 @@
 						<option value="NGO">NGO</option>
 						<option value="Donor">Donor</option>
 						<option value="Caterer">Caterer</option>
+						<option value="Admin">Admin</option>
 					</select>
-					<div class="form-group">
-						<input type="text" class="form-control py-4 shadow-none" id="number" placeholder="Enter phone number"
+					
+						<div class="form-group">
+							<input type="text" class="form-control py-4 shadow-none" id="number" placeholder="Enter phone number"
 							name="number" pattern="[7-9]{1}[0-9]{9}"
 							title="Phone number with 7-9 and remaing 9 digit with 0-9" required>
-					</div>
-					<div class="form-group">
-						<input type="email" class="form-control py-4 shadow-none" id="email" placeholder="Enter your email"
+						</div>
+						<div  class="form-group">
+							<input type="email" class="form-control py-4 shadow-none" id="email" placeholder="Enter your email"
 							name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-control py-4 shadow-none" id="password" placeholder="Set a Password"
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control py-4 shadow-none" id="password" placeholder="Set a Password"
 							name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
 							title="Password should be At least 1 Uppercase At least 1 Lowercase
 							At least 1 Number,At least 1 Symbol, symbol allowed-->!@#$%^&*_=+- Min 8 chars and Max 12 chars" required>
-					</div>
+						</div>
+					
 					<button class="btn shadow-none" aria-pressed="true" id="nxtBtn" style="background-color: #B6C8BC;"> Go Next
 						<span class="iconify" data-icon="bi:arrow-right-short" data-width="20"
 							data-height="20"></span></button>
